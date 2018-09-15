@@ -1,0 +1,39 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven Bundle Plugin
+Built-By: jesse
+Build-Jdk: 1.7.0_71
+Implementation-Vendor: Eclipse.org - Jetty
+Implementation-Version: 9.2.7.v20150116
+url: http://www.eclipse.org/jetty
+Export-Package: org.eclipse.jetty.websocket.server;version="9.2.7",org
+ .eclipse.jetty.websocket.server.pathmap;version="9.2.7"
+Bundle-Classpath: .
+Tool: Bnd-1.15.0
+Bundle-Name: Jetty :: Websocket :: Server
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-Copyright: Copyright (c) 2008-2014 Mort Bay Consulting Pty. Ltd.
+Bundle-Vendor: Eclipse Jetty Project
+Bundle-Version: 9.2.7.v20150116
+Bnd-LastModified: 1421453409719
+Bundle-ManifestVersion: 2
+Bundle-Description: Administrative parent pom for Jetty modules
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0, http://www
+ .eclipse.org/org/documents/epl-v10.php
+Import-Package: javax.servlet;version="[3.1,4.0)",javax.servlet.http;v
+ ersion="[3.1,4.0)",org.eclipse.jetty.io;version="[9.0,10.0)",org.ecli
+ pse.jetty.server;version="[9.0,10.0)",org.eclipse.jetty.server.handle
+ r;version="[9.0,10.0)",org.eclipse.jetty.servlet;version="[9.0,10.0)"
+ ,org.eclipse.jetty.util.annotation;version="[9.0,10.0)",org.eclipse.j
+ etty.util.component;version="[9.0,10.0)",org.eclipse.jetty.util.log;v
+ ersion="[9.0,10.0)",org.eclipse.jetty.util.thread;version="[9.0,10.0)
+ ",org.eclipse.jetty.websocket.api;version="[9.0,10.0)",org.eclipse.je
+ tty.websocket.api.extensions;version="[9.0,10.0)",org.eclipse.jetty.w
+ ebsocket.api.util;version="[9.0,10.0)",org.eclipse.jetty.websocket.co
+ mmon;version="[9.0,10.0)",org.eclipse.jetty.websocket.common.events;v
+ ersion="[9.0,10.0)",org.eclipse.jetty.websocket.common.extensions;ver
+ sion="[9.0,10.0)",org.eclipse.jetty.websocket.common.io;version="[9.0
+ ,10.0)",org.eclipse.jetty.websocket.servlet;version="[9.0,10.0)"
+Bundle-SymbolicName: org.eclipse.jetty.websocket.server
+Bundle-DocURL: http://www.eclipse.org/jetty
+

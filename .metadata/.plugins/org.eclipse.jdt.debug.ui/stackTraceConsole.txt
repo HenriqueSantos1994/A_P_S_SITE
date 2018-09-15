@@ -1,0 +1,3 @@
+<button href='fichaS?acao=c&dado=" + ob.getIdFicha() + "' "
+					+ "									class=\"modal-action modal-close waves-effect waves-green btn-flat\">Confirmar</button>\r\n"
+					+ "							</div>\r\n" + "						</div>");

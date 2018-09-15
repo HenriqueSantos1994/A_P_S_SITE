@@ -1,0 +1,71 @@
+package Dao;
+
+import java.awt.List;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import Model.Industria;
+
+public class IndustriaDAO {
+    
+    private Connection conectar(){
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            return DriverManager.getConnection("jdbc:mysql://localhost/aps", "root", "");
+        }catch(Exception ex){
+            return null;
+        }
+    }
+    
+    public ArrayList<Industria> selectAll() {
+        ArrayList<Industria> lista = new ArrayList<Industria>();
+        Industria ob = new Industria();
+        Connection con = conectar();
+        try{
+            PreparedStatement stmt = con.prepareStatement("select*from FichaAtividadesPoluentes");
+            ResultSet rs = stmt.executeQuery();
+            while(rs.next()) {
+                ob.setIdIndustria((Integer.parseInt(rs.getString("id"))));
+                ob.setNomeIndustria("nomeInd");               
+                ob = new Industria();
+            }
+        
+            rs.close();
+            stmt.close();
+            con.close();
+            
+            return lista;
+        }catch (Exception ex){
+            return null;
+        }    
+    }
+    
+    public String insert(int idIndustria, String nomeIndustria){
+            try{
+            Connection con = conectar();
+            PreparedStatement stmt = con.prepareStatement("insert into localizacao(IdIndustria, NomeIndustria,"
+            + "Observacao) values(' "+ idIndustria +" ',' " + nomeIndustria + "');");            
+            stmt.execute();
+            stmt.close();
+            con.close();
+            return "Cadastro com sucesso";
+        }catch (Exception ex) {
+            return "Erro no Cadastro";
+        }
+    }
+    
+    public int delete(int idIndustria){
+        try{
+        Connection con = conectar();
+        PreparedStatement stmt = con.prepareStatement("delete from Industria where id = " + idIndustria);
+        stmt.execute();
+        stmt.close();
+        con.close();
+        return 1;
+        }catch (Exception ex){
+            return 0;
+        }
+    }
+}

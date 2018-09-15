@@ -1,0 +1,65 @@
+package Dao;
+
+import java.awt.List;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import Model.Ficha;
+
+public class FichaDAO {
+    
+    private Connection conectar(){
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            return DriverManager.getConnection("jdbc:mysql://localhost/aps", "root", "");
+        }catch(Exception ex){
+            return null;
+        }
+    }
+    
+    public ArrayList<Ficha> selectAll() {
+        ArrayList<Ficha> lista = new ArrayList<Ficha>();
+        Ficha ob = new Ficha();
+        Connection con = conectar();
+        try{
+            PreparedStatement stmt = con.prepareStatement("select*from FichaAtividadesPoluentes");
+            ResultSet rs = stmt.executeQuery();
+            while(rs.next()) {
+                ob.setConfirmacao((Integer.parseInt(rs.getString("id"))));
+                ob.setIdAgente((Integer.parseInt(rs.getString("id"))));
+                ob.setIdIndustria((Integer.parseInt(rs.getString("id"))));
+                ob.setObservacao("observacao");
+                lista.add(ob);
+                ob = new Ficha();
+            }
+        
+            rs.close();
+            stmt.close();
+            con.close();
+            
+            return lista;
+        }catch (Exception ex){
+            return null;
+        }    
+    }
+
+    public String insert(int idIndustria, int idAgente, char confirmacao, String observacao){
+            try{
+            Connection con = conectar();
+            PreparedStatement stmt = con.prepareStatement("insert into localizacao(IdIndustria, IdAgente, Confirmacao,"
+            + "Observacao) values(' "+idIndustria+"','"+idAgente+"','"+confirmacao+"','"+observacao+"');");            
+            stmt.execute();
+            stmt.close();
+            con.close();
+            return "Cadastro com sucesso";
+        }catch (Exception ex) {
+            return "Erro no Cadastro";
+        }
+    }
+
+}
+
+    
+

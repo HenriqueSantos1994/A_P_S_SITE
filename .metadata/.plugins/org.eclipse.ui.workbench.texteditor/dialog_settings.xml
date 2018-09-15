@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="messageInputDom" key="selection"/>
+		<item value="true" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="messageInputDom"/>
+			<item value="versi"/>
+			<item value="-versi"/>
+			<item value="toast"/>
+			<item value="ficha"/>
+			<item value="Ficha"/>
+			<item value="ocorrencia"/>
+			<item value="ocorrencia_"/>
+			<item value="Industria"/>
+			<item value="industria"/>
+			<item value="objOcorrencia"/>
+			<item value="this."/>
+			<item value="System.out"/>
+			<item value="janeiro"/>
+			<item value="format"/>
+		</list>
+		<list key="replacehistory">
+			<item value="atividade"/>
+			<item value="Atividade"/>
+			<item value="agente_"/>
+			<item value="industria_"/>
+			<item value="Agente"/>
+			<item value="agente"/>
+			<item value="industria"/>
+			<item value="Industria"/>
+			<item value="objFicha"/>
+			<item value=""/>
+			<item value="dataFinal"/>
+			<item value="dataInicial"/>
+			<item value="Relatório"/>
+			<item value="Ocorrência"/>
+			<item value="rel = dao"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="284" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="391" key="DIALOG_HEIGHT"/>
+		<item value="1096" key="DIALOG_X_ORIGIN"/>
+		<item value="239" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

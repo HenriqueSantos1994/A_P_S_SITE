@@ -1,0 +1,49 @@
+       
+     .nav ul {
+        padding: 1em;
+      }
+       
+        li {
+	         display: inline-block;
+         }
+
+/*Media Queries*/
+@media only screen and (max-width: 800px) {
+.wrap {
+	 max-width: 100%;
+	 margin: 0;
+}
+  
+  .nav.nav-aberta {
+		   position: relative;
+		   padding: 0 0 0.5em 0;
+		   height: 0;
+	 }   
+	       
+      .nav ul {
+	        padding: .5em;
+	        margin: 0;
+          background: rgb(65, 65, 65, 0.9);
+	     }		
+	       
+	       li {
+		         margin: 0;
+		         padding: 0;
+		         display: block;
+	        }
+       			
+	           li a {
+		           padding: 0.5em 0 0.5em 0;
+		           display: block;
+	           }
+  
+            li:last-child {
+              border-bottom:none;
+            }
+	       
+	       .nav-toggle {
+	       		display: block;
+	       		padding: .4em;
+	       		margin: .5em 0;
+	       }
+}
